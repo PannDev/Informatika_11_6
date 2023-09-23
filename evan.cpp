@@ -51,13 +51,14 @@ void prob2()
     }
 }
 
-void prob3() {
+void prob3()
+{
     /*
-    
-    *       *     
+
+    *       *
     * *   * *
     * * * * *
-    
+
     3 baris 5 kolom
 
     baris 1 mencetak bintang di kolom 1 sama 5 aja
@@ -68,45 +69,62 @@ void prob3() {
 
     */
 
-    for (int baris = 1; baris <= 3; baris++) {
+    for (int baris = 1; baris <= 3; baris++)
+    {
 
-        for (int kolom = 1; kolom <= 5; kolom++) {
+        for (int kolom = 1; kolom <= 5; kolom++)
+        {
 
-            if (baris == 1) {
-                if (kolom == 1 || kolom == 5) {
+            if (baris == 1)
+            {
+                if (kolom == 1 || kolom == 5)
+                {
                     cout << "*";
                 }
-                else {
+                else
+                {
                     cout << " ";
                 }
             }
 
-            else if (baris == 2) {
-                if (kolom == 1 || kolom == 2 || kolom == 4 || kolom == 5) {
+            else if (baris == 2)
+            {
+                if (kolom == 1 || kolom == 2 || kolom == 4 || kolom == 5)
+                {
                     cout << "*";
                 }
-                else {
+                else
+                {
                     cout << " ";
                 }
             }
 
-            else if (baris == 3) {
+            else if (baris == 3)
+            {
                 cout << "*";
             }
-            
         }
 
         cout << endl;
     }
+}
 
+void evan114()
+{
 
+    /*
+
+    ( 3 Baris  5 Kolom )
+    * - - - - *
+    * * - - * *
+    * * * * * *
+
+    */
 }
 
 //! main
 int main()
 {
-    prob3();
-
     return 0;
 }
 
