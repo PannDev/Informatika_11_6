@@ -109,22 +109,16 @@ void prob3()
     }
 }
 
-void evan114()
-{
-
-    /*
-
-    ( 3 Baris  5 Kolom )
-    * - - - - *
-    * * - - * *
-    * * * * * *
-
-    */
-}
 
 //! main
 int main()
 {
+    prob1();
+    cout << endl; cout << endl;
+    prob2();
+    cout << endl;cout << endl;
+    prob3();
+    cout << endl;cout << endl;
     return 0;
 }
 
