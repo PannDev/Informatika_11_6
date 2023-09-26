@@ -110,15 +110,33 @@ void prob3()
 }
 
 
+int gcd(int a, int b) {
+    if (b == 0) {
+        return a;
+    }
+    return gcd(b, a % b);
+}
+
+void simplifyFraction(int& numerator, int& denominator) {
+    int gcdValue = gcd(numerator, denominator);
+    numerator /= gcdValue;
+    denominator /= gcdValue;
+}
+
 //! main
 int main()
 {
-    prob1();
-    cout << endl; cout << endl;
-    prob2();
-    cout << endl;cout << endl;
-    prob3();
-    cout << endl;cout << endl;
+    
+    int t; cout << "t : "; cin >> t;
+    while (t--) {
+    
+        int numerator, denominator;
+        cin >> numerator >> denominator;
+        simplifyFraction(numerator, denominator);
+        cout << numerator << "/" << denominator << endl;
+    
+    }
+    
     return 0;
 }
 
