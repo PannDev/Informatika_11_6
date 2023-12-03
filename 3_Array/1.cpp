@@ -74,7 +74,7 @@ int main () {
     cout << "input kolom matrix : "; cin >> x;
 
 
-    int matriks[y][x];
+    float matriks[y][x];
     
     cout << endl;
     for (int j = 0; j < y; j++) {
@@ -112,15 +112,30 @@ int main () {
         j++;
     }
 
-    // buat determinan 3x 3
-
-    int kiri = 0, kanan = 0;
-    for (int i = 0; i < 3; i++) {
-        kiri += matriks[i][i];
-        kanan -= matriks[i][2-i];
+    // test det 2x2
+    float det22 = 0;
+    for (int i = 0; i < 2; i++) {
+        det22 += matriks[0][i] * matriks[1][(i + 1) % 2];
+        det22 -= matriks[0][(i + 1) % 2] * matriks[1][i];
     }
-
-    cout << "Determinan : " << kiri + kanan << endl;
+    cout << det22 << endl;
+    cout << endl;
+    float det33 = 0;
+    for (int i = 0; i < 3; i++) {
+        float product = 1;
+        for (int j = 0; j < 3; j++) {
+            product *= matriks[j][(i + j) % 3];
+        }
+        det33 += product;
+    }
+    for (int i = 0; i < 3; i++) {
+        float product = 1;
+        for (int j = 0; j < 3; j++) {
+            product *= matriks[j][(i - j + 3) % 3];
+        }
+        det33 -= product;
+    }
+    
 
 
 
