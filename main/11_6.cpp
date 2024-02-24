@@ -867,6 +867,32 @@ void transposeMatrix() {
     }
 }
 
+//32 //? pembulatan
+void pembulatan() {
+    float angka1 = 11.5;
+    float angka2 = 11.4;
+
+    float angka3 = -11.5;
+    float angka4 = -11.4;
+
+    cout << "Bilangan Positif" << endl;
+    cout << "Pembulatan ke atas " << angka1 << " = " << ceil(angka1) << endl;
+    cout << "Pembulatan ke bawah " << angka1 << " = " << floor(angka1) << endl;
+    cout << "Pembulatan terdekat "  << angka1 << " = "<< round(angka1) << endl;
+    cout << "Pembulatan ke atas " << angka2 << " = " << ceil(angka2) << endl;
+    cout << "Pembulatan ke bawah " << angka2 << " = " << floor(angka2) << endl;
+    cout << "Pembulatan terdekat "  << angka2 << " = "<< round(angka2) << endl;
+    cout << endl;
+    cout << "Bilangan Negatif" << endl;
+    cout << "Pembulatan ke atas " << angka3 << " = " << ceil(angka3) << endl;
+    cout << "Pembulatan ke bawah " << angka3 << " = " << floor(angka3) << endl;
+    cout << "Pembulatan terdekat "  << angka3 << " = "<< round(angka3) << endl;
+    cout << "Pembulatan ke atas " << angka4 << " = " << ceil(angka4) << endl;
+    cout << "Pembulatan ke bawah " << angka4 << " = " << floor(angka4) << endl;
+    cout << "Pembulatan terdekat "  << angka4 << " = "<< round(angka4) << endl;
+    
+}
+
 // 0 //? main 
 //! maintenance
 void home() {
@@ -906,6 +932,7 @@ void home() {
     cout << "29. Luas dan Keliling Bangun Datar\n";
     cout << "30. strcat strlen dan lain-lain\n";
     cout << "31. Transpose Matrix (array 2d)\n";
+    cout << "32. Pembulatan\n";
     cout << ">> ";
 
     cin >> pilih;
@@ -1004,8 +1031,11 @@ void home() {
         case 31:
             transposeMatrix();
             break;
+        case 32:
+            pembulatan();
+            break;
         default:
-            cout << "Pilih angka 1 - 31 !" << endl << endl;
+            cout << "Pilih angka 1 - 32 !" << endl << endl;
             // usleep(1000000);
             home();
             break;
